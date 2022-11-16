@@ -1,10 +1,7 @@
 ﻿using System.Net;
-using System.Text;
 using System.Web.Http;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.OpenApi.Extensions;
-using Newtonsoft.Json;
 using RetailProductManagementBackend.Model;
 using RetailProductManagementBackend.Repository;
 

@@ -1,5 +1,4 @@
-﻿using System.Web.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace RetailProductManagementBackend.Controllers;
 [ApiController]
