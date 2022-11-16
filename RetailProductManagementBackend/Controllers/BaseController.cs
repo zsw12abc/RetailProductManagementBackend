@@ -2,8 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 
 namespace RetailProductManagementBackend.Controllers;
-
-public class BaseController : ApiController
+[ApiController]
+[Microsoft.AspNetCore.Components.Route("[controller]")]
+public class BaseController : ControllerBase
 {
     // GET
     private readonly ILogger<BaseController> _logger;

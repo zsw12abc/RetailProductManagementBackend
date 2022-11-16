@@ -1,8 +1,7 @@
-﻿using AttributeRouting;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace RetailProductManagementBackend.Controllers;
-
+[ApiController]
 [Route("api/[controller]")]
 public class ProductBaseController : BaseController
 {
