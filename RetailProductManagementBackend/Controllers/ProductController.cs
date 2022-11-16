@@ -19,22 +19,25 @@ public class ProductController : ProductBaseController
     public ProductController(ILogger<BaseController> logger) : base(logger)
     {
     }
-    // [DisableCors]
-    [Microsoft.AspNetCore.Mvc.HttpGet(Name="GetAllProducts")]
+
+    [EnableCors("MyPolicy")]
+    [Microsoft.AspNetCore.Mvc.HttpGet(Name = "GetAllProducts")]
     public IEnumerable<Product> Get()
     {
         var products = ProductRepository.GetAllProducts().ToList();
         return products;
     }
-    // [DisableCors]
-    [Microsoft.AspNetCore.Mvc.HttpPut("UpdateProduct")]
+
+    [EnableCors("MyPolicy")]
+    [Microsoft.AspNetCore.Mvc.HttpPut(Name = "UpdateProduct")]
     public HttpResponseMessage Put([System.Web.Http.FromBody] Product product)
     {
         ProductRepository.UpdateProduct(product);
         return new HttpResponseMessage(HttpStatusCode.OK);
     }
-    // [DisableCors]
-    [Microsoft.AspNetCore.Mvc.HttpDelete("DeleteProduct/{id:int}")]
+
+    [EnableCors("MyPolicy")]
+    [Microsoft.AspNetCore.Mvc.HttpDelete(Name = "DeleteProduct/{id:int}")]
     public HttpResponseMessage Delete([FromUri] int id)
     {
         ProductRepository.DeleteProduct(id);
